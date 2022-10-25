@@ -1,11 +1,11 @@
 function calculer_imc(){
 
-    taille = document.querySelector("#taille")
-    poids = document.querySelector("#poids")
-    imc = ((taille * taille) / poids)
+    let taille = document.querySelector("#taille").value
+    let poids = document.querySelector("#poids").value
+    let imc = (poids / (taille * taille))
 
-    document.getElementById("resultat").innerHTML = taille
-    document.querySelector("#resultat").innerHTML = taille
+    /*document.getElementById("resultat").innerHTML = taille*/
+    document.querySelector("#resultat").innerHTML = imc
 
    
 }
