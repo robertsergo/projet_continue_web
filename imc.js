@@ -1,4 +1,4 @@
-function calculer_imc(){
+function calcul_metric_imc(){
 
     let taille = document.querySelector("#taille").value
     let poids = document.querySelector("#poids").value
@@ -11,14 +11,13 @@ function calculer_imc(){
 }
 
 
-function ma_fonction(){    
-    let taille = 1.8   
-    let poids = 75
-    let imc = poids/(taille*taille)
-    //document.write("imc = "+imc) 
-    document.querySelector("#resultat").innerHTML = taille
-    document.getElementById('resultat').innerHTML = poids;
-    
+function calcul_imperial_imc(){  
+    let taille_metre = document.querySelector("#taille").value
+    let poids_kg = document.querySelector("#poids").value           
+    taille_pouce = taille_metre * 39.3700787 
+    poids_livre = poids_kg * 2.2
+    imc = (poids_livre / (taille_pouce * taille_pouce)) * 703   
+    document.querySelector("#resultat").innerHTML = imc    
 }
 
 
