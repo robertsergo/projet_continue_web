@@ -1,18 +1,15 @@
 function calcul_metric_imc(){
     let imc = 0
-    let message_erreur = "veillez remplir les champs svp".toLocaleUpperCase()
+    let message_erreur = "veillez remplir les champs convenablement svp".toLocaleUpperCase()
     let taille = document.querySelector("#taille").value
     let poids = document.querySelector("#poids").value
     imc = (poids / (taille * taille))
 
-    if (imc >= 0){
-        document.querySelector("#resultat1").innerHTML = imc
-
+    if (imc <= 0 || taille <= 0 || poids <= 0 ){
+        document.querySelector("#resultat1").innerHTML = message_erreur 
     }else{
-
-        document.querySelector("#resultat1").innerHTML = message_erreur   
+        document.querySelector("#resultat1").innerHTML = imc       
     }  
-
    
 }
 
@@ -24,12 +21,10 @@ function calcul_imperial_imc(){
     let taille = document.querySelector("#taille2").value
     let poids = document.querySelector("#poids2").value
     imc = (poids / (taille * taille))
-    if (imc >= 0){
-        document.querySelector("#resultat2").innerHTML = imc
-
+    if (imc <= 0 || taille <= 0 || poids <= 0 ){
+        document.querySelector("#resultat2").innerHTML = message_erreur 
     }else{
-
-        document.querySelector("#resultat2").innerHTML = message_erreur   
+        document.querySelector("#resultat2").innerHTML = imc       
     }  
    
      
