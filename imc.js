@@ -1,23 +1,38 @@
 function calcul_metric_imc(){
-
+    let imc = 0
+    let message_erreur = "veillez remplir les champs svp".toLocaleUpperCase()
     let taille = document.querySelector("#taille").value
     let poids = document.querySelector("#poids").value
-    let imc = (poids / (taille * taille))
+    imc = (poids / (taille * taille))
 
-    /*document.getElementById("resultat").innerHTML = taille*/
-    document.querySelector("#resultat").innerHTML = imc
+    if (imc >= 0){
+        document.querySelector("#resultat1").innerHTML = imc
+
+    }else{
+
+        document.querySelector("#resultat1").innerHTML = message_erreur   
+    }  
 
    
 }
 
 
-function calcul_imperial_imc(){  
-    let taille_metre = document.querySelector("#taille").value
-    let poids_kg = document.querySelector("#poids").value           
-    taille_pouce = taille_metre * 39.3700787 
-    poids_livre = poids_kg * 2.2
-    imc = (poids_livre / (taille_pouce * taille_pouce)) * 703   
-    document.querySelector("#resultat").innerHTML = imc    
+function calcul_imperial_imc(){ 
+    let imc = 0 
+    let message_erreur = "veillez remplir les champs svp".toLocaleUpperCase()
+    
+    let taille = document.querySelector("#taille2").value
+    let poids = document.querySelector("#poids2").value
+    imc = (poids / (taille * taille))
+    if (imc >= 0){
+        document.querySelector("#resultat2").innerHTML = imc
+
+    }else{
+
+        document.querySelector("#resultat2").innerHTML = message_erreur   
+    }  
+   
+     
 }
 
 

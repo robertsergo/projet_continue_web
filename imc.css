@@ -8,7 +8,7 @@ body {
     background-color: aqua;
 }
 
-#id2 {
+#id2, #id3 {
     padding: 7px;
     border: none;
     border-radius: 4px;
