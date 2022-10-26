@@ -1,6 +1,6 @@
 function calcul_metric_imc(){
     let imc = 0
-    let message_erreur = "veillez remplir les champs convenablement svp".toLocaleUpperCase()
+    let message_erreur = "veillez remplir les champs convénablement svp".toLocaleUpperCase()
     let taille = document.querySelector("#taille").value
     let poids = document.querySelector("#poids").value
     imc = (poids / (taille * taille))
@@ -16,7 +16,7 @@ function calcul_metric_imc(){
 
 function calcul_imperial_imc(){ 
     let imc = 0 
-    let message_erreur = "veillez remplir les champs svp".toLocaleUpperCase()
+    let message_erreur = "veillez remplir les champs convénablement svp".toLocaleUpperCase()
     
     let taille = document.querySelector("#taille2").value
     let poids = document.querySelector("#poids2").value

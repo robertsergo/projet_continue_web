@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel='icon' href='./images/favicon1.jpg' type='image/x-icon'/>
+    <link rel="shortcut icon"  type="image/x-icon"  href="./images/favicon2.jpg"/>
+    <link rel="shortcut icon" href="./images/favicon3.jpg" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tableau css</title>
+
+    <style>        
+        table{
+            width: 50%;
+            height: 70px;
+            border: 2px solid powderblue
+        }
+
+        td{
+          border: 5px solid black;
+        }
+
+
+        #premier {            
+            background-color: rgba(255, 255, 255);
+            text-align: left;
+            padding: 10px 0;
+            font-size: 22px;
+            list-style-type: square;
+        }
+        #deuxieme{
+            font-family : courier;            
+            text-align:center;
+            font-size: 60%
+            
+        }
+        #troisieme{
+            front-weight:lighter;
+
+        }
+
+        #quatrieme{
+            text-decoration: display; 
+            
+        }
+
+        #cinquieme{
+            color: blue;
+            font-family: verdana;
+              
+            margin-top: 25px; 
+            
+        }
+
+        #sixieme{
+            text-align:right;
+            background-color: #CCCCCC;
+            list-style-type: hebrew;
+            /*
+            list-style: circle;
+            */
+        }
+
+        #septieme{
+            font-style: italic;
+            text-decoration: none;
+            margin-top: 18px;
+
+        }
+
+        #huitieme{
+            font-size: 22px;
+            font-weight: bold;
+            color: #00CCFF;
+
+        }
+
+        #neuvieme{
+            width: 180px; 
+            border: 2px solid #00FF00;
+            font-family: "Courier New", Courier, monospace;
+
+        }
+          
+       
+    </style>
+</head>
+<body>
+    <h1>Bienvenue au Restaurant R<br> menu principal</h1>
+			
+            <nav>
+                <a href="index.html">accueil</a>                
+            </nav>
+
+            <table>
+                <colgroup>
+                    <col span="1" style="background-color:rgb(236, 225, 225)">
+                    <col span="1" style="background-color:rgb(157, 157, 179)">
+                    <col span="1" style="background-color:rgb(197, 197, 152)">
+                </colgroup>
+               
+               
+               
+               <tr>                
+                    <td >
+                        <div id="premier"> 
+                            <ul>
+                                <li>Dejeuner</li>
+                                <li>Diner</li>
+                                <li>Souper</li>    
+                            </ul>                       
+                                                    
+                        </div>
+                    </td> 
+                    <td> <div id="deuxieme"> Dejeuner Souper Diner </div></td>
+                    <td> <div id="troisieme"> Dejeuner Souper Diner </div></td> 
+                </tr>
+               <tr>
+                    <td><div id="quatrieme">
+                        <form action="https://www.google.com">
+                            <input type="checkbox" id="dejeuner" name="dejeuner" value="Bike">
+                            <label for="dejeuner"> Dejeuner</label><br>
+                            <input type="checkbox" id="diner" name="diner" value="diner">
+                            <label for="diner"> Diner</label><br>
+                            <input type="checkbox" id="souper" name="souper" value="souper">
+                            <label for="souper"> Souper</label><br><br>
+                            <input type="submit" value="Submit">
+                          </form>
+
+                        </div>
+                    </td> 
+
+                    <td><div id="cinquieme"> Dejeuner Souper Diner </div></td>
+
+                    <td>
+                        <div id="sixieme">
+                            <ul>
+                                <ol>Dejeuner</li>
+                                <ol>Diner</li>
+                                <ol>Souper</li>    
+                            </ul> 
+                        </div>
+                    </td> 
+                </tr>
+
+                <tr>
+                    <td><div id="septieme"> Dejeuner Souper Diner </div></td> 
+
+                    <td><div id="huitieme"> Dejeuner Souper Diner </div></td>
+
+                    <td><div id="neuvieme"> Dejeuner Souper Diner </div></td> 
+                </tr>
+
+             
+             </table>
+    
+</body>
+</html>
