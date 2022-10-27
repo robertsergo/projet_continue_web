@@ -17,8 +17,6 @@
 
 
     <div class="menu_commun"> 
-       
-
         <nav>
             <a href="./index.html">accueil</a>
             <a href="html.html">html</a>
@@ -36,33 +34,52 @@
         </p>
     </div>
 
+
+    <h1>Authors</h1>
+    <ul id="authors"></ul>
+
+    <script>
+
+function createNode(element) {
+    return document.createElement(element);
+}
+
+function append(parent, el) {
+  return parent.appendChild(el);
+}
+
+const ul = document.getElementById('authors');
+const url = 'https://randomuser.me/api/?results=10';
+
+fetch(url)
+.then((resp) => resp.json())
+.then(function(data) {
+  let authors = data.results;
+  return authors.map(function(author) {
+    let li = createNode('li');
+    let img = createNode('img');
+    let span = createNode('span');
+    img.src = author.picture.medium;
+    span.innerHTML = `${author.name.first} ${author.name.last}`;
+    append(li, img);
+    append(li, span);
+    append(ul, li);
+  })
+})
+.catch(function(error) {
+  console.log(error);
+});
+
+    </script>
     
 
+    
+    
+    source: https://www.digitalocean.com/community/
+    tutorials/how-to-use-the-javascript-fetch-api-to-get-data-fr
 
-    <canvas id="canvasElem" width="900" height="680" style="border:1px solid"></canvas>
-  
-    <input type="button" value="Submit" onclick="submit()">
-  
-    <script>
-      canvasElem.onmousemove = function(e) {
-        let ctx = canvasElem.getContext('2d');
-        ctx.lineTo(e.clientX, e.clientY);
-        ctx.stroke();
-      };
-  
-      async function submit() {
-        let blob = await new Promise(resolve => canvasElem.toBlob(resolve, 'image/png'));
-        let response = await fetch('/article/fetch/post/image', {
-          method: 'POST',
-          body: blob
-        });
-  
-        // le serveur répond avec confirmation et la taille de l'image
-        let result = await response.json();
-        alert(result.message);
-      }
-  
-    </script>
+
+    
   </body>
 </html>
 
