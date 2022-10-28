@@ -9,8 +9,7 @@ function calcul_metric_imc(){
         document.querySelector("#resultat1").innerHTML = message_erreur 
     }else{
         document.querySelector("#resultat1").innerHTML = imc       
-    }  
-   
+    }    
 }
 
 
@@ -26,6 +25,4 @@ function calcul_imperial_imc(){
     }else{
         document.querySelector("#resultat2").innerHTML = imc       
     }  
-   
-     
 }
